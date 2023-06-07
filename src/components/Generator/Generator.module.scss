@@ -1,9 +1,12 @@
 .wrapper {
     display: flex;
     justify-content: center;
-    margin-top: 50px;
+    height: 955px;
+    border: 1px solid black;
+    background-color: rgb(153, 184, 184);
 
     .generator {
+        margin-top: 50px;
         width: 200px;
         height: 200px;
         border: 1px solid black;
