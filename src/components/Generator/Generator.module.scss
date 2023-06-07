@@ -1,3 +1,11 @@
-.generator {
-    background-color: red;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+
+    .generator {
+        width: 200px;
+        height: 200px;
+        border: 1px solid black;
+    }
 }

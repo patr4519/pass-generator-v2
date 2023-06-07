@@ -1,10 +1,10 @@
-import React from 'react'
-import styles from './Generator.module.scss'
+import React from "react";
+import styles from "./Generator.module.scss";
 
 export const Generator = () => {
-    return (
-        <div className={styles.generator}>
-            Generator
-        </div>
-    )
-}
+  return (
+    <div className={styles.wrapper}>
+      <div className={styles.generator}>Generator</div>
+    </div>
+  );
+};
