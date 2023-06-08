@@ -1,6 +1,7 @@
 import React from "react";
 import styles from "./Generator.module.scss";
 import Button from "@mui/material/Button";
+import Checkbox from "@mui/material/Checkbox";
 
 export const Generator = () => {
   const [numCheck, setNumCkeck] = React.useState(true);
@@ -40,8 +41,7 @@ export const Generator = () => {
     <div className={styles.wrapper}>
       <div className={styles.generator}>
         <div className={styles.variants}>
-          <input
-            type="checkbox"
+          <Checkbox
             id="numbers"
             name="numbers"
             onChange={(e) => setNumCkeck(e.target.checked)}
@@ -49,8 +49,7 @@ export const Generator = () => {
           />
           <label htmlFor="numbers">Numbers</label>
           <br />
-          <input
-            type="checkbox"
+          <Checkbox
             id="lowCase"
             name="lowCase"
             onChange={(e) => setLowCase(e.target.checked)}
@@ -58,8 +57,7 @@ export const Generator = () => {
           />
           <label htmlFor="lowCase">Lower case letters</label>
           <br />
-          <input
-            type="checkbox"
+          <Checkbox
             id="upperCase"
             name="upperCase"
             onChange={(e) => setUpperCase(e.target.checked)}
@@ -67,8 +65,7 @@ export const Generator = () => {
           />
           <label htmlFor="upperCase">Upper case letters</label>
           <br />
-          <input
-            type="checkbox"
+          <Checkbox
             id="specSymb"
             name="specSymb"
             onChange={(e) => setSpecSymb(e.target.checked)}
@@ -80,7 +77,7 @@ export const Generator = () => {
           <input
             className={styles.passLength}
             value={passLength}
-            min={0}
+            min={6}
             max={20}
             onChange={(e) => setPassLength(Number(e.target.value))}
             type="number"
@@ -98,7 +95,10 @@ export const Generator = () => {
         </Button>
         <ul className={styles.passwordList}>
           {passwords?.map((password, index) => (
-            <li key={index}>{password}</li>
+            <li key={index} className={styles.listItem}>
+              <span>{password}</span>
+              <div>img</div>
+            </li>
           ))}
         </ul>
       </div>
