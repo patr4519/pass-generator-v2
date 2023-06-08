@@ -77,7 +77,7 @@ export const Generator = () => {
           <input
             className={styles.passLength}
             value={passLength}
-            min={6}
+            min={8}
             max={20}
             onChange={(e) => setPassLength(Number(e.target.value))}
             type="number"
