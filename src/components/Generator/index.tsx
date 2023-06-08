@@ -7,6 +7,7 @@ export const Generator = () => {
   const [upperCase, setUpperCase] = React.useState(true);
   const [specSymb, setSpecSymb] = React.useState(false);
   const [passLength, setPassLength] = React.useState(12);
+  const [passwords, setPasswords] = React.useState<string[] | null>(null);
 
   function generatePassword(passLength: number) {
     let charset = "";
@@ -22,8 +23,16 @@ export const Generator = () => {
       password += charset.charAt(randomIndex);
     }
 
-    console.log(password);
     return password;
+  }
+
+  function generatePasswords(passLength: number) {
+    let passwords = [];
+    for (let i = 0; i < 10; i++) {
+      passwords.push(generatePassword(passLength));
+    }
+    setPasswords(passwords);
+    return passwords;
   }
 
   return (
@@ -75,9 +84,13 @@ export const Generator = () => {
             id="length"
             name="length"
           />
-          <br />
-          <button onClick={() => generatePassword(passLength)}>Generate</button>
         </div>
+        <button onClick={() => generatePasswords(passLength)}>Generate</button>
+        <ul>
+          {passwords?.map((password, index) => (
+            <li key={index}>{password}</li>
+          ))}
+        </ul>
       </div>
     </div>
   );
