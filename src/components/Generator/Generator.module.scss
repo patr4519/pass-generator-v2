@@ -24,19 +24,22 @@
     }
 
     .passwordList {
-        min-width: 200px;
-        padding: 10px;
+      min-width: 200px;
+      padding: 10px;
 
-        .listItem {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          margin: 3px 0;
+      .listItem {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 5px 0;
+        padding: 2px 5px;
+        background-color: #6d959b;
+        border-radius: 5px;
 
-          span {
-            margin-right: 15px;
-          }
+        span {
+          margin-right: 15px;
         }
+      }
     }
   }
 }

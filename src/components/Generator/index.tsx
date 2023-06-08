@@ -88,7 +88,7 @@ export const Generator = () => {
         <Button
           className={styles.generateBtn}
           onClick={() => generatePasswords(passLength)}
-          disabled={passLength > 20}
+          disabled={passLength > 20 || passLength < 8}
           variant="contained"
         >
           Generate
