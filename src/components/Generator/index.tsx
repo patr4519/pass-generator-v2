@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Generator.module.scss";
+import Button from "@mui/material/Button";
 
 export const Generator = () => {
   const [numCheck, setNumCkeck] = React.useState(true);
@@ -87,13 +88,15 @@ export const Generator = () => {
             name="length"
           />
         </div>
-        <button
-          disabled={passLength > 20}
+        <Button
+          className={styles.generateBtn}
           onClick={() => generatePasswords(passLength)}
+          disabled={passLength > 20}
+          variant="contained"
         >
           Generate
-        </button>
-        <ul>
+        </Button>
+        <ul className={styles.passwordList}>
           {passwords?.map((password, index) => (
             <li key={index}>{password}</li>
           ))}
