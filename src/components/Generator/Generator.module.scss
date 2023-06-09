@@ -2,7 +2,10 @@
   display: flex;
   justify-content: center;
   height: 955px;
-  background-color: rgb(153, 184, 184);
+  background-color: rgba(234, 234, 234, 0.97);
+  border-radius: 10px;
+  margin-top: 2px;
+  box-shadow: 1px 1px 3px #0f0000;
 
   .generator {
     margin-top: 50px;
@@ -31,10 +34,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
-        margin: 5px 0;
+        margin: 10px 0;
         padding: 2px 5px;
-        background-color: #6d959b;
+        background-color: #eef1f2;
         border-radius: 5px;
+        box-shadow: 1px 1px 3px #0f0000;
 
         span {
           margin-right: 15px;
