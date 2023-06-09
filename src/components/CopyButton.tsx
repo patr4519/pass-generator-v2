@@ -48,7 +48,7 @@ const CopyButton: React.FC<{ text: string }> = ({ text }) => {
       )}
       {!isVisible && (
         <>
-          <img width={15} src={checkmark} alt="copied" />
+          <img width={17} src={checkmark} alt="copied" />
         </>
       )}
     </div>
