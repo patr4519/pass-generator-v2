@@ -3,12 +3,14 @@
   justify-content: center;
   background-color: rgba(234, 234, 234, 0.97);
   border-radius: 10px;
-  margin-top: 2px;
+  margin: 2px auto;
   box-shadow: 1px 1px 3px #0f0000;
-  position: fixed;
-  top: 40px;
-  bottom: 42px;
+  height: 843px;
   width: 800px;
+
+  @media (max-width: 412px) {
+    width: 90%;
+  }
 
   .generator {
     margin-top: 50px;
