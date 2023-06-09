@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Generator.module.scss";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
+import ContentCopyIcon from "@mui/icons-material/ContentCopy";
 
 export const Generator = () => {
   const [numCheck, setNumCkeck] = React.useState(true);
@@ -97,7 +98,7 @@ export const Generator = () => {
           {passwords?.map((password, index) => (
             <li key={index} className={styles.listItem}>
               <span>{password}</span>
-              <div>img</div>
+              <ContentCopyIcon className={styles.copyIcon} fontSize="small" />
             </li>
           ))}
         </ul>
