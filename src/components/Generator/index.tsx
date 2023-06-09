@@ -8,7 +8,7 @@ export const Generator = () => {
   const [numCheck, setNumCkeck] = React.useState(true);
   const [lowCase, setLowCase] = React.useState(true);
   const [upperCase, setUpperCase] = React.useState(true);
-  const [specSymb, setSpecSymb] = React.useState(false);
+  const [specSymb, setSpecSymb] = React.useState(true);
   const [passLength, setPassLength] = React.useState(12);
   const [passwords, setPasswords] = React.useState<string[] | null>(null);
 
