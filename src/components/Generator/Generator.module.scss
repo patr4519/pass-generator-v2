@@ -1,11 +1,14 @@
 .wrapper {
   display: flex;
   justify-content: center;
-  height: 955px;
   background-color: rgba(234, 234, 234, 0.97);
   border-radius: 10px;
   margin-top: 2px;
   box-shadow: 1px 1px 3px #0f0000;
+  position: fixed;
+  top: 40px;
+  bottom: 42px;
+  width: 800px;
 
   .generator {
     margin-top: 50px;
