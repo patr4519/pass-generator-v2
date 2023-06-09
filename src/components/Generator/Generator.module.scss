@@ -48,6 +48,9 @@
         .svgWrapper {
           display: flex;
           align-items: center;
+          justify-content: center;
+          width: 23px;
+          height: 23px;
 
           &:hover {
             cursor: pointer;
