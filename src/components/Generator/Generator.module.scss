@@ -45,12 +45,17 @@
         border-radius: 5px;
         box-shadow: 1px 1px 3px #0f0000;
 
-        span {
-          margin-right: 15px;
+        .svgWrapper {
+          display: flex;
+          align-items: center;
+
+          &:hover {
+            cursor: pointer;
+          }
         }
 
-        .copyIcon:hover {
-          cursor: pointer;
+        span {
+          margin-right: 15px;
         }
       }
     }
