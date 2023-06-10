@@ -14,11 +14,6 @@ export const Generator = () => {
   const [passwords, setPasswords] = React.useState<string[] | null>(null);
 
   const { t } = useTranslation();
-  const { i18n } = useTranslation();
-
-  const changeLanguage = (lng: string) => {
-    i18n.changeLanguage(lng);
-  };
 
   function generatePassword(passLength: number) {
     let charset = "";
@@ -111,7 +106,6 @@ export const Generator = () => {
           ))}
         </ul>
       </div>
-      {/* <button onClick={() => changeLanguage("ru")}>Translate</button> */}
     </div>
   );
 };

@@ -9,6 +9,7 @@
   align-items: center;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: relative;
 
   @media (max-width: 412px) {
     width: 90%;
@@ -22,6 +23,18 @@
     .text {
       font-size: 22px;
       margin-left: 3px;
+    }
+
+    .enIcon {
+      cursor: pointer;
+      position: absolute;
+      right: 43px;
+    }
+
+    .ruIcon {
+      cursor: pointer;
+      position: absolute;
+      right: 10px;
     }
   }
 }
