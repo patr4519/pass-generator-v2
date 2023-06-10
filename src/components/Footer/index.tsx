@@ -1,9 +1,8 @@
-import styles from './Footer.module.scss'
+import styles from "./Footer.module.scss";
+import { useTranslation } from "react-i18next";
 
 export const Footer = () => {
-    return (
-        <footer className={styles.footer}>
-            All right reserved
-        </footer>
-    )
-}
+  const { t } = useTranslation();
+
+  return <footer className={styles.footer}>{t("All right reserved")}</footer>;
+};

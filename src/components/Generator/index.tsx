@@ -3,6 +3,7 @@ import styles from "./Generator.module.scss";
 import Button from "@mui/material/Button";
 import Checkbox from "@mui/material/Checkbox";
 import CopyButton from "../CopyButton";
+import { useTranslation } from "react-i18next";
 
 export const Generator = () => {
   const [numCheck, setNumCkeck] = React.useState(true);
@@ -11,6 +12,13 @@ export const Generator = () => {
   const [specSymb, setSpecSymb] = React.useState(true);
   const [passLength, setPassLength] = React.useState(12);
   const [passwords, setPasswords] = React.useState<string[] | null>(null);
+
+  const { t } = useTranslation();
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng: string) => {
+    i18n.changeLanguage(lng);
+  };
 
   function generatePassword(passLength: number) {
     let charset = "";
@@ -48,7 +56,7 @@ export const Generator = () => {
             onChange={(e) => setNumCkeck(e.target.checked)}
             checked={numCheck}
           />
-          <label htmlFor="numbers">Numbers</label>
+          <label htmlFor="numbers">{t("Numbers")}</label>
           <br />
           <Checkbox
             id="lowCase"
@@ -56,7 +64,7 @@ export const Generator = () => {
             onChange={(e) => setLowCase(e.target.checked)}
             checked={lowCase}
           />
-          <label htmlFor="lowCase">Lower case letters</label>
+          <label htmlFor="lowCase">{t("Lower case letters")}</label>
           <br />
           <Checkbox
             id="upperCase"
@@ -64,7 +72,7 @@ export const Generator = () => {
             onChange={(e) => setUpperCase(e.target.checked)}
             checked={upperCase}
           />
-          <label htmlFor="upperCase">Upper case letters</label>
+          <label htmlFor="upperCase">{t("Upper case letters")}</label>
           <br />
           <Checkbox
             id="specSymb"
@@ -72,9 +80,9 @@ export const Generator = () => {
             onChange={(e) => setSpecSymb(e.target.checked)}
             checked={specSymb}
           />
-          <label htmlFor="specSymb">Spec symbols</label>
+          <label htmlFor="specSymb">{t("Spec symbols")}</label>
           <br />
-          <label htmlFor="length">Password length</label>
+          <label htmlFor="length">{t("Password length")}</label>
           <input
             className={styles.passLength}
             value={passLength}
@@ -92,7 +100,7 @@ export const Generator = () => {
           disabled={passLength > 20 || passLength < 8}
           variant="contained"
         >
-          Generate
+          {t("Generate")}
         </Button>
         <ul className={styles.passwordList}>
           {passwords?.map((password, index) => (
@@ -103,6 +111,7 @@ export const Generator = () => {
           ))}
         </ul>
       </div>
+      {/* <button onClick={() => changeLanguage("ru")}>Translate</button> */}
     </div>
   );
 };
